@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-export default function AddNewItem({addItem}) {
+export default function AddNewItem({onAddItem}) {
     const [description, setDesciption] = useState('')
 
     const handleSubmit = (e) => {
@@ -8,7 +8,7 @@ export default function AddNewItem({addItem}) {
 
         if (description.length === 0) return
 
-        addItem(description)
+        onAddItem(description)
         setDesciption('')
     }
 

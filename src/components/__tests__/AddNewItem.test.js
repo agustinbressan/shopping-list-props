@@ -39,7 +39,7 @@ test('add a new item, with empty description DO NOT call the add item prop funct
     // ARRANGE
     const mockAddItemFn = jest.fn()
     const mockProps = {
-        addItem: mockAddItemFn
+        onAddItem: mockAddItemFn
     }
     render(<AddNewItem {...mockProps} />)
 
@@ -58,7 +58,7 @@ test('add a new item, call the add item prop function and clear description fiel
     // ARRANGE
     const mockAddItemFn = jest.fn()
     const mockProps = {
-        addItem: mockAddItemFn
+        onAddItem: mockAddItemFn
     }
     render(<AddNewItem {...mockProps} />)
 

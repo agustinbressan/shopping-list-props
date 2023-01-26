@@ -1,7 +1,7 @@
 import React from "react"
 import Item from "./Item"
 
-export default function ItemsList({items, deleteItem, toggleCrossoutItem}) {
+export default function ItemsList({items, onDeleteItem, onToggleCrossoutItem}) {
     const doneItemsCount = items.filter(i=>i.done).length
 
     return (
@@ -9,7 +9,7 @@ export default function ItemsList({items, deleteItem, toggleCrossoutItem}) {
             <h2>Items ({doneItemsCount}/{items.length}) {(items.length && doneItemsCount === items.length) ? '✅ All done!' : ''}</h2>
             {
                 items.length ?
-                items.map((item, index) => <Item key={item.id} item={item} itemNumber={(index+1)} deleteItem={deleteItem} toggleCrossoutItem={toggleCrossoutItem} />)
+                items.map((item, index) => <Item key={item.id} item={item} itemNumber={(index+1)} onDeleteItem={onDeleteItem} onToggleCrossoutItem={onToggleCrossoutItem} />)
                 : 'The item list is empty.'
             }
         </div>

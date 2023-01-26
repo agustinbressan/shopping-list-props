@@ -62,7 +62,7 @@ test('delete item action', () => {
             description: 'Bananas',
             done: false
         },
-        deleteItem: mockDeleteItemFn,
+        onDeleteItem: mockDeleteItemFn,
     }
     render(<ItemActions {...mockProps} />)
 
@@ -86,7 +86,7 @@ test('crossout item action', () => {
             description: 'Apples',
             done: false
         },
-        toggleCrossoutItem: mockToggleCrossoutItemFn,
+        onToggleCrossoutItem: mockToggleCrossoutItemFn,
     }
     render(<ItemActions {...mockProps} />)
 
@@ -110,7 +110,7 @@ test('restore item action', () => {
             description: 'Cheese',
             done: true
         },
-        toggleCrossoutItem: mockToggleCrossoutItemFn,
+        onToggleCrossoutItem: mockToggleCrossoutItemFn,
     }
     render(<ItemActions {...mockProps} />)
 

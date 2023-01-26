@@ -1,7 +1,7 @@
 import React from "react"
 import ItemActions from "./ItemActions"
 
-export default function Item({item, itemNumber, deleteItem, toggleCrossoutItem}) {
+export default function Item({item, itemNumber, onDeleteItem, onToggleCrossoutItem}) {
     const { description, done } = item
 
     const itemCrossoutStyles = { 
@@ -11,7 +11,7 @@ export default function Item({item, itemNumber, deleteItem, toggleCrossoutItem})
 
     return (
         <div>
-            <span style={itemCrossoutStyles} title={description}>{itemNumber}) {description}</span> - <ItemActions item={item} deleteItem={deleteItem} toggleCrossoutItem={toggleCrossoutItem}/>
+            <span style={itemCrossoutStyles} title={description}>{itemNumber}) {description}</span> - <ItemActions item={item} onDeleteItem={onDeleteItem} onToggleCrossoutItem={onToggleCrossoutItem}/>
         </div>
     )
 }

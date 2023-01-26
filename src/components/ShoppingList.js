@@ -25,8 +25,8 @@ export default function ShoppingList() {
 
     return (
         <div>
-            <AddNewItem addItem={addItem}/>
-            <ItemsList items={items} deleteItem={deleteItem} toggleCrossoutItem={toggleCrossoutItem} />
+            <AddNewItem onAddItem={addItem}/>
+            <ItemsList items={items} onDeleteItem={deleteItem} onToggleCrossoutItem={toggleCrossoutItem} />
         </div>
     )
 }
